@@ -1,0 +1,70 @@
+﻿@model CodesWeaverNew.Models.About
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>About</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Discription" class="control-label"></label>
+                <input asp-for="Discription" class="form-control" />
+                <span asp-validation-for="Discription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Boolet1Title" class="control-label"></label>
+                <input asp-for="Boolet1Title" class="form-control" />
+                <span asp-validation-for="Boolet1Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Boolet1TitleDescription" class="control-label"></label>
+                <input asp-for="Boolet1TitleDescription" class="form-control" />
+                <span asp-validation-for="Boolet1TitleDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Boolet2Title" class="control-label"></label>
+                <input asp-for="Boolet2Title" class="form-control" />
+                <span asp-validation-for="Boolet2Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Boolet2TitleDescription" class="control-label"></label>
+                <input asp-for="Boolet2TitleDescription" class="form-control" />
+                <span asp-validation-for="Boolet2TitleDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Boolet3Title" class="control-label"></label>
+                <input asp-for="Boolet3Title" class="form-control" />
+                <span asp-validation-for="Boolet3Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Boolet3TitleDescription" class="control-label"></label>
+                <input asp-for="Boolet3TitleDescription" class="form-control" />
+                <span asp-validation-for="Boolet3TitleDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Image" class="control-label"></label>
+                <input type="file" asp-for="Image" class="form-control" />
+                <span asp-validation-for="Image" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="willshown" /> @Html.DisplayNameFor(model => model.willshown)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
